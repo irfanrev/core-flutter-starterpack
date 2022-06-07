@@ -1,3 +1,4 @@
+import 'package:core_flutter_starterpack/pages/login_page.dart';
 import 'package:core_flutter_starterpack/utils/splash_screen.dart';
 import 'package:flutter/material.dart';
 
@@ -13,11 +14,10 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      title: 'Flutter Demo',
-      theme: ThemeData(
-        primarySwatch: Colors.lightBlue,
-      ),
-      home: SplashScreen(),
+      routes: {
+        '/': (context) => SplashScreen(),
+        '/login': (context) => LoginPage(),
+      },
     );
   }
 }
